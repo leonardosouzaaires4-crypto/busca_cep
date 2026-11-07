@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca CEP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <form id="formulario" onsubmit="return false;">
+        <h1>Busca CEP</h1>
+        
+        <div class="entrada-cep">
+            <label for="cep">Digite o CEP:</label>
+            <!-- Adicionado oninput para criar a máscara visual automaticamente -->
+            <input type="text" id="cep" placeholder="00000-000" maxlength="9" oninput="MascaraCep(this)">
+        </div>
+
+        <div class="container-botoes">
+            <button id="buscar" onclick="BuscarCep()" type="button">Buscar</button>
+            <button id="limpar" onclick="NovaBusca()" type="button">Nova Busca</button>
+        </div>
+
+        <div class="saida-cep">
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" readonly class="saida-cep">
+        </div>
+
+        <div class="saida-cep">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" readonly class="saida-cep">
+        </div>
+
+        <div class="saida-cep">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" readonly class="saida-cep">
+        </div>
+
+        <div class="saida-cep">
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" readonly class="saida-cep">
+        </div>
+    </form>
+</body>
+</html>
